@@ -1,60 +1,49 @@
+const users = [
+  {
+    name: "Van Batchelder",
+    city: "London",
+    birthYear: 1998
+  },
+  {
+    name: "Winter Rubino",
+    city: "Madrid",
+    birthYear: 1992
+  },
+  {
+    name: "Yusuf Shea",
+    city: "Paris",
+    birthYear: 1990
+  },
+  {
+    name: "Zion Shively",
+    city: "Alabama",
+    birthYear: 2002,
+  }
+];
 
-var users = [
-	{"user": "krishna"},
-	{"user": "vijay"},
-	{"user": "vasu"},
-	{"user": "venu"},
-	{"user": "rajesh"},
-	{"user": "varun"},
-	{"user": "chandra"}
-	];
-
-let resultDetails = users.map(user => {
-    let mark = Math.random() * 100;
-    user.mark = mark;
-    return user
-});
+const currentYear = new Date().getFullYear();
+const filteredUsers = users.filter((user) => (currentYear - user.birthYear) > 25);
 
 
-var selectedCandidate = resultDetails.filter(user => {
-	if(user.mark > 80){
-		return user;
-    }
-});
-let candidate=[];
-selectedCandidate.forEach(ele=>{candidate.push(ele.user)})
-console.log(candidate);
+map@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+console.log(filteredUsers);
 
-const users2 = [
-	{
-	  name: "David John",
-	  city: "London",
-	  birthYear: 1998
-	},
-	{
-	  name: "Justin",
-	  city: "Canada",
-	  birthYear: null
-	},
-	{
-	  name: "Yusuf Shea",
-	  city: "Paris",
-	  birthYear: 1990
-	},
-	{
-	  name: "Zerovsky",
-	  city: "Russia",
-	  birthYear: 2002,
-	}
-  ];
-  
-  const currentYear = new Date().getFullYear();
-  
-  const userNames = users2.reduce((filterUsers, user) => {
-	if (user.birthYear && (currentYear - user.birthYear) > 25) {
-	  filterUsers.push(user.name);
-	}
-	return filterUsers;
-  }, []);
-  
-  console.log(userNames);
+const tasks = [
+  {
+    'name'     : 'Write for Envato Tuts+',
+    'duration' : 120
+  },
+  {
+    'name'     : 'Work out',
+    'duration' : 60
+  },
+  {
+    'name'     : 'Procrastinate on Duolingo',
+    'duration' : 240
+  }
+];
+
+const task_names = tasks.map(task => task.name)
+console.log(task_names)
+
+
