@@ -47,3 +47,13 @@ const Lab15 = () => {
   );
 };
 export default Lab15;
+
+
+#img-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#img-wrapper>div{
+  flex : 0 1 33%;
+}
