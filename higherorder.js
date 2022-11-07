@@ -43,7 +43,13 @@ const tasks = [
   }
 ];
 
+
 const task_names = tasks.map(task => task.name)
 console.log(task_names)
 
-
+reduce-----------------
+const a =[1,2,3,4,5]
+const total =a.reduce((acc,item)=>{
+    return acc+item;
+})
+console.log(total);
